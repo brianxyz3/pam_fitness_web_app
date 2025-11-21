@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "specialty": "Strength Training",
+    "experience_years": 5
+  },
+  {
+    "id": 2,
+    "name": "Sarah Lee",
+    "specialty": "Cardio Fitness",
+    "experience_years": 3
+  },
+  {
+    "id": 3,
+    "name": "Joan Dalton",
+    "specialty": "Wrestling Training",
+    "experience_years": 2
+  },
+  {
+    "id": 4,
+    "name": "Sadie Love",
+    "specialty": "Boxing Training",
+    "experience_years": 5
+  }
+]
