@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+img {
+  display: block;
+}
+
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-color: #0D0D0D;
+  color: rgb(240, 248, 255);
+}
+
+nav {
+  font-weight: 600;
+}
+
+.bg-custom-dark {
+  background-color: #1a1a1a;
+}
+
+.bg-custom-darker {
+  background-color: #121212;
+}
+
+.text-custom-orange {
+  color: #FF4A04;
+}
+
+.bg-custom-orange {
+  background-color: #FF4A04;
+}
+
+.border-custom-orange {
+  border-color: #FF4A04;
+}
+
+.nav-active {
+  color: #FF4A04;
+  font-weight: 600;
+}
+
+.subs_container:hover .subs_card:not(:hover) {
+  filter: blur(3px);
+  box-shadow: none;
+}
+
+form label .subs_form_input, 
+form label .subs_form_select,
+form .subs_form_btn {
+  box-shadow: 5px 5px 10px #122118,
+              -5px -5px 10px #1b3224;
+}
+
+form label .subs_form_input:focus,
+form label .subs_form_select:focus {
+  box-shadow: inset 5px 5px 10px #122118,
+              inset -5px -5px 10px #1c3a28;
+}
+
+form .subs_form_btn:active {
+  box-shadow: inset 5px 5px 10px #3a1507e9,
+              inset -5px -5px 10px #8d5038;
+}
