@@ -1,6 +1,6 @@
 import json
 from fastapi import APIRouter
-from models.plan import Plan
+from app.models.plan import Plan
 from pathlib import Path
 
 router = APIRouter()

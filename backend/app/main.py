@@ -1,5 +1,6 @@
+import os
 from fastapi import FastAPI
-from api.v1 import employees, plans
+from app.api.v1 import employees, plans
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -9,16 +10,19 @@ app = FastAPI(
     description="Backend API for gym coaches, nutritionists, and workout plans."
 )
 
-# frontend allowed origin url
+# frontend allowed dev origin url
 # origins = [
 #     "http://localhost:3000",
-#     "http://127.0.0.1:3000"
+#     "http://127.0.0.1:3000",
 # ]
+
+# frontend allowed prod origin url
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "").split(",")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"], #allow all url origins
-    # allow_credentials=True,
+    allow_origins=allowed_origins, #allow origin url
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

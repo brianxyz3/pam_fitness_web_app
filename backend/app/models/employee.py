@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 
-class Coach(BaseModel):
+class Employee(BaseModel):
     id: int
     name: str
     speciality: str
