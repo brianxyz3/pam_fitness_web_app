@@ -1,7 +1,6 @@
 import { MdEmojiEvents, MdFitnessCenter, MdFlag, MdGroups, MdVisibility } from 'react-icons/md'
 import AboutCard from '../components/AboutCard'
 import TeamCard from '../components/TeamCard'
-import { Link } from 'react-router'
 import GetStarted from '../components/GetStarted'
 
 const AboutPage = () => {

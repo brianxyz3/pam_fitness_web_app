@@ -1,7 +1,6 @@
 import { MdBusinessCenter, MdFitnessCenter, MdGroups, MdMilitaryTech, MdRestaurantMenu, MdSpa } from 'react-icons/md';
 import AboutCard from '../components/AboutCard';
 import ClientReviewCard from '../components/ClientReviewCard';
-import { Link } from 'react-router';
 import GetStarted from '../components/GetStarted';
 
 const ServicePage = () => {
