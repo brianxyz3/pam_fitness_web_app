@@ -19,6 +19,7 @@ pipeline {
             agent {
                 docker {
                     image "node:18-alpine"
+                    reuseNode true
                 }
             }
             steps {
@@ -26,8 +27,15 @@ pipeline {
                     sh """
                     npm ci
                     npm run build
-                    docker build -t pam-fitness-frontend .
                     """
+                }
+            }
+        }
+
+        stage('Build Image') {
+            steps {
+                script {
+                    sh "docker build -t pam-fitness-frontend ."
                 }
             }
         }
