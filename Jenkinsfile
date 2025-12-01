@@ -24,7 +24,6 @@ pipeline {
             steps {
                 script {
                     sh """
-                    cd frontend
                     npm ci
                     npm run build
                     docker build -t pam-fitness-frontend .
