@@ -1,8 +1,10 @@
 # ---- Production Stage ----
 FROM nginx:alpine
 
+RUN npm --version
+
 # Copy built assets from Jenkins build stage
-COPY build /usr/share/nginx/html
+COPY dist /usr/share/nginx/html
 
 RUN cat /etc/nginx/conf.d/default.conf
 
