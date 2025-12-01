@@ -1,8 +1,6 @@
 # ---- Production Stage ----
 FROM nginx:alpine
 
-RUN npm --version
-
 # Copy built assets from Jenkins build stage
 COPY dist /usr/share/nginx/html
 
