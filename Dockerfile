@@ -4,6 +4,11 @@ FROM nginx:alpine
 # Copy built assets from Jenkins build stage
 COPY build /usr/share/nginx/html
 
+RUN cat /etc/nginx/conf.d/default.conf
+
+# Copy custom nginx config (proxy to FastAPI private EC2)
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]
