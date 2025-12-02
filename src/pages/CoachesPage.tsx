@@ -15,7 +15,7 @@ const CoachesPage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const res = await fetch("/api/employees")
+            const res = await fetch("http://54.246.223.128:8000/api/employees")
             const json = await res.json()
             setData(json)
         }
